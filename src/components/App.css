@@ -1,0 +1,107 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+}
+
+.display {
+  background-color: #393756;
+  box-sizing: border-box;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  min-height: 100px;
+  height: auto;
+  overflow-wrap: break-word;
+  padding: 8px 16px;
+  position: relative;
+  text-align: right;
+  overflow: hidden;
+}
+
+.span-ripple {
+  opacity: 0;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+}
+
+.ripple-animate {
+  animation: ripple 800ms linear forwards;
+}
+
+.button-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+}
+
+.button {
+  background-color: #564d98;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  height: 100px;
+  font-size: 1.3rem;
+  line-height: 100px;
+}
+
+.button:nth-of-type(-n + 4) {
+  background-color: #6b82f2;
+}
+
+.button:nth-of-type(4n + 4) {
+  background-color: #6b82f2;
+}
+
+.button:nth-of-type(20) {
+  background-color: #ff1e4b;
+}
+
+.button:hover {
+  transition: 500ms;
+  opacity: 0.6;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .App {
+    width: 300px;
+  }
+
+  .button-panel {
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(4, 75px);
+  }
+
+  .button {
+    height: 75px;
+    line-height: 75px;
+  }
+}
