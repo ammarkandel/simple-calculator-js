@@ -8,7 +8,7 @@
 
 ### How to run this project
 
-- First: clone the repo and open the folder.
+- First: clone the repo `git clone git@github.com:ammarkandel/simple-calculator-js.git` and open the folder `cd simple-calculator-js`.
 - Make sure you have npm installed localy then run `npm install` and `npm start`.
 
 ### Author
