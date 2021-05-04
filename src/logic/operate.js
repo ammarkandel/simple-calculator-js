@@ -2,27 +2,28 @@ import Big from 'big.js'; // eslint-disable-line
 
 const operate = (num1, num2, operation) => {
   const n = Big(num1);
+  const n2 = Big(num2);
   let evaluation;
 
   switch (operation) {
     case '+':
-      evaluation = n.plus(num2);
+      evaluation = n.plus(n2);
       break;
     case '-':
-      evaluation = n.minus(num2);
+      evaluation = n.minus(n2);
       break;
     case 'x':
-      evaluation = n.times(num2);
+      evaluation = n.times(n2);
       break;
     case '÷':
-      if (num2 === '0') {
+      if (n2 === '0') {
         evaluation = 'Invalid operation: division by 0';
       } else {
-        evaluation = n.div(num2);
+        evaluation = n.div(n2);
       }
       break;
     default:
-      evaluation = n.mod(num2);
+      evaluation = n.mod(n2);
   }
 
   return evaluation.toString();
