@@ -4,7 +4,7 @@
 
 ### Live version
 
-[live version](https://simple-calculator-js.herokuapp.com/)
+[live version](https://simple-calculator-88.netlify.app/)
 
 ### How to run this project
 
